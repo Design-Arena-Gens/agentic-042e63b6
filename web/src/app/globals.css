@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --space-black: #05010d;
+  --space-ink: #0f0825;
+  --aurora-electric: #48d7ff;
+  --aurora-violet: #c060ff;
+  --aurora-gold: #ffce4f;
+  --text-primary: rgba(244, 244, 255, 0.96);
+  --text-muted: rgba(225, 225, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --glass: rgba(17, 16, 38, 0.65);
+  --glow-strong: 0 0 50px rgba(72, 215, 255, 0.35);
+  --glow-soft: 0 0 30px rgba(192, 96, 255, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: var(--text-primary);
+  background:
+      radial-gradient(circle at 10% 10%, rgba(72, 215, 255, 0.2), transparent 40%),
+      radial-gradient(circle at 90% 15%, rgba(255, 120, 220, 0.2), transparent 45%),
+      radial-gradient(circle at 15% 80%, rgba(255, 200, 120, 0.15), transparent 50%),
+      linear-gradient(135deg, var(--space-black), var(--space-ink));
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(72, 215, 255, 0.35);
+  color: var(--space-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
